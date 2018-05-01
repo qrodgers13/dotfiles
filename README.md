@@ -10,7 +10,7 @@ Follow these steps in order to re-create on a local machine.
 ```
 2. Create a syslink back to the files
 ```
-    ln -s ~/.dotfiles/vim ~/.vimrc
+    ln -s ~/.dotfiles/vimrc ~/.vimrc
 ```
 
 

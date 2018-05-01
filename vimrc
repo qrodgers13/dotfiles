@@ -6,6 +6,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
+Plug 'arcticicestudio/nord-vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'w0rp/ale'
 Plug 'bling/vim-airline'
@@ -39,11 +40,9 @@ let g:deoplete#enable_at_startup = 1
 call plug#end()            " required
 
 syntax enable
-set background=dark
-colorscheme solarized
+colorscheme nord
 
-let g:airline_theme='solarized'
-let g:airline_solarized_bg='light'
+let g:airline_theme='nord'
 let g:vim_json_syntax_conceal = 0
 
 let &colorcolumn=join(range(101,102),",")

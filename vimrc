@@ -45,6 +45,10 @@ colorscheme nord
 let g:airline_theme='nord'
 let g:vim_json_syntax_conceal = 0
 
+" VirtualEnv NeoVim Setup
+let g:python_host_prog = '/Users/mrbook/.virtualenvs/neovim2/bin/python'
+let g:python3_host_prog = '/Users/mrbook/.virtualenvs/neovim3/bin/python'
+
 let &colorcolumn=join(range(101,102),",")
 highlight ColorColumn ctermbg=235 guibg=#93a1a1
 

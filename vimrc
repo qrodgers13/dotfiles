@@ -1,6 +1,7 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+
 " Plugins Start
 call plug#begin('~/.vim/plugged')
 
@@ -40,6 +41,13 @@ let g:deoplete#enable_at_startup = 1
 call plug#end()            " required
 
 syntax enable
+
+augroup nord-overrides
+  autocmd!
+  autocmd ColorScheme nord highlight Search ctermbg=3
+  autocmd ColorScheme nord highlight Visual ctermfg=1
+augroup END
+
 colorscheme nord
 
 let g:airline_theme='nord'

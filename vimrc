@@ -27,6 +27,9 @@ Plug 'hdima/python-syntax'
 " other
 Plug 'avakhov/vim-yaml'
 Plug 'ryanoasis/vim-devicons'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-notes'
+
 " deoplete
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }

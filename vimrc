@@ -75,3 +75,9 @@ set nu
 set nowrap
 set noshowmode
 set pastetoggle=<F2>
+let mapleader = ","
+
+nnoremap <leader>s :split<cr>
+map <leader>nn :NERDTreeToggle<cr>
+map <leader>nb :NERDTreeFromBookmark
+map <leader>nf :NERDTreeFind<cr>

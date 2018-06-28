@@ -24,11 +24,17 @@ Plug 'bbatsov/rubocop'
 Plug 'nvie/vim-flake8'
 Plug 'hdima/python-syntax'
 
+" javascript
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'kchmck/vim-coffee-script'
+
 " other
 Plug 'avakhov/vim-yaml'
 Plug 'ryanoasis/vim-devicons'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-notes'
+Plug 'scrooloose/nerdcommenter'
 
 " deoplete
 if has('nvim')
@@ -39,6 +45,11 @@ else
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 let g:deoplete#enable_at_startup = 1
+
+" deoplete tab-complete
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+" tern
+autocmd FileType javascript nnoremap <silent> <buffer> gb :TernDef<CR>
 
 " All of your Plugins must be added before the following line
 call plug#end()            " required
@@ -81,3 +92,5 @@ nnoremap <leader>s :split<cr>
 map <leader>nn :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark
 map <leader>nf :NERDTreeFind<cr>
+
+map <leader>cc :NERDComComment

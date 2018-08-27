@@ -30,11 +30,14 @@ Plug 'mxw/vim-jsx'
 Plug 'kchmck/vim-coffee-script'
 
 " other
-Plug 'avakhov/vim-yaml'
+Plug 'connorholyday/vim-snazzy'
 Plug 'ryanoasis/vim-devicons'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-notes'
 Plug 'scrooloose/nerdcommenter'
+Plug 'wincent/command-t'
+Plug 'pearofducks/ansible-vim'
+
 
 " deoplete
 if has('nvim')

@@ -5,20 +5,15 @@ filetype off                  " required
 " Plugins Start
 call plug#begin('~/.vim/plugged')
 
-Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
 Plug 'arcticicestudio/nord-vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'w0rp/ale'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'junegunn/fzf'
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
 Plug 'elzr/vim-json'
-
-" ruby
-Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-rails'
-Plug 'bbatsov/rubocop'
 
 " python
 Plug 'nvie/vim-flake8'
@@ -27,10 +22,8 @@ Plug 'hdima/python-syntax'
 " javascript
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-Plug 'kchmck/vim-coffee-script'
 
 " other
-Plug 'connorholyday/vim-snazzy'
 Plug 'ryanoasis/vim-devicons'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-notes'
@@ -68,7 +61,9 @@ augroup END
 colorscheme nord
 
 let g:airline_theme='nord'
+let g:airline#extensions#ale#enabled = 1
 let g:vim_json_syntax_conceal = 0
+let b:ale_linters = ['eslint']
 
 " VirtualEnv NeoVim Setup
 let g:python_host_prog = '/Users/mrbook/.virtualenvs/neovim2/bin/python'
@@ -91,9 +86,25 @@ set noshowmode
 set pastetoggle=<F2>
 let mapleader = ","
 
+set rtp+=/usr/local/opt/fzf
+
 nnoremap <leader>s :split<cr>
 map <leader>nn :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark
 map <leader>nf :NERDTreeFind<cr>
 
 map <leader>cc :NERDComComment
+nmap <leader>t :Files<cr>
+
+
+let g:ale_fixers = {
+\   'python': ['yapf', 'isort', 'autopep8'],
+\   'javascript': ['eslint']
+\}
+
+let g:ale_linters = {
+\   'python': ['flake8', 'pyls', 'mypy'],
+\   'javascript': ['eslint'],
+\   'typescript': ['tslint'],
+\   'scss': ['stylelint']
+\}

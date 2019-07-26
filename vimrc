@@ -1,7 +1,6 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-
 " Plugins Start
 call plug#begin('~/.vim/plugged')
 
@@ -24,12 +23,12 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 
 " other
-Plug 'ryanoasis/vim-devicons'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-notes'
 Plug 'scrooloose/nerdcommenter'
 Plug 'wincent/command-t'
 Plug 'pearofducks/ansible-vim'
+Plug 'ryanoasis/vim-devicons'
 
 
 " deoplete
@@ -43,7 +42,7 @@ endif
 let g:deoplete#enable_at_startup = 1
 
 " deoplete tab-complete
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 " tern
 autocmd FileType javascript nnoremap <silent> <buffer> gb :TernDef<CR>
 
@@ -66,8 +65,8 @@ let g:vim_json_syntax_conceal = 0
 let b:ale_linters = ['eslint']
 
 " VirtualEnv NeoVim Setup
-let g:python_host_prog = '/Users/mrbook/.virtualenvs/neovim2/bin/python'
-let g:python3_host_prog = '/Users/mrbook/.virtualenvs/neovim3/bin/python'
+let g:python_host_prog = '/Users/mrbook2/.pyenv/versions/neovim2/bin/python'
+let g:python3_host_prog = '/Users/mrbook2/.pyenv/versions/neovim3/bin/python'
 
 let &colorcolumn=join(range(101,102),",")
 highlight ColorColumn ctermbg=235 guibg=#93a1a1
